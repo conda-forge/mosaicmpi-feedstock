@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
@@ -29,7 +29,6 @@ requirements:
     - scipy >=1.9.0
     - matplotlib-base
     - upsetplot
-    - httplib2
     - tomli
     - tomli-w
     - distinctipy
