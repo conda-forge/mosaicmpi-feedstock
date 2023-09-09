@@ -42,7 +42,7 @@ requirements:
     - seaborn
     - statsmodels
     - networkx
-    - bioconda::gseapy
+    - 'gseapy[channel=bioconda]'
 test:
   imports:
     - mosaicmpi
