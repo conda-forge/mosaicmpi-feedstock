@@ -42,8 +42,6 @@ requirements:
     - seaborn
     - statsmodels
     - networkx
-    - pip
-      - gseapy
 test:
   imports:
     - mosaicmpi
