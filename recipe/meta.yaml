@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.1.6" %}
+{% set version = "2.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2fbbd9a07f76f09750f58c2b654d906395ee0098843732a814f984ae2ba3bd44
+  sha256: 359efa61dfe21a8c4520a0839b45c70c3f2e4fb3a1f620a9006400257db0ec6b
 
 build:
   noarch: python
@@ -42,6 +42,7 @@ requirements:
     - seaborn
     - statsmodels
     - networkx
+    - tqdm
 test:
   imports:
     - mosaicmpi
