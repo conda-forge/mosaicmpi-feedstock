@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.1.9" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -42,6 +42,7 @@ requirements:
     - seaborn
     - statsmodels
     - networkx
+    - tqdm
 test:
   imports:
     - mosaicmpi
