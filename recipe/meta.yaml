@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
@@ -42,7 +42,6 @@ requirements:
     - seaborn
     - statsmodels
     - networkx
-    - tqdm
 test:
   imports:
     - mosaicmpi
