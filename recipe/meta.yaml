@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 5
+  number: 6
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
@@ -47,6 +47,10 @@ requirements:
 test:
   imports:
     - mosaicmpi
+  commands:
+    - pip list
+  requires:
+    - pip
 
 about:
   home: https://github.com/MorrissyLab/mosaicMPI
