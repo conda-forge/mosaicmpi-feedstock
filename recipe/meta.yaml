@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
@@ -21,7 +21,6 @@ requirements:
     - python >=3.9
     - setuptools >=42
     - pip
-    - tbb
   run:
     - python >=3.9
     - anndata >=0.8.0
@@ -44,7 +43,7 @@ requirements:
     - statsmodels
     - networkx
     - tqdm
-    - tbb
+    - pynndescent <0.5.3
 test:
   imports:
     - mosaicmpi
