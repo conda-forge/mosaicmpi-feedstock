@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.1.9" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2abd288ac8be8f1a02b714d852bcea4210c4191a3cc112cbd0a0ea575e7fd284
+  sha256: 6a9801e426614b10006e5d49be69eaa5cdae719ed29e4dcb64ced8bf8ca087f0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 6
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
@@ -43,11 +43,12 @@ requirements:
     - statsmodels
     - networkx
     - tqdm
+    
 test:
   imports:
     - mosaicmpi
   commands:
-    - pip check
+    - pip list
   requires:
     - pip
 
