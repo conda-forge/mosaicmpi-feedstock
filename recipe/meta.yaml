@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.4.0" %}
+{% set version = "2.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4b11878f112e0db287d30ee953508904c67deb4d6edfca9189c2bc2d73345138
+  sha256: fb3d5ede34c91fd3189af44f0d9ee0a838dff021bd3cf35c5e0fd01b712135b0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
@@ -22,27 +22,28 @@ requirements:
     - setuptools >=42
     - pip
   run:
-    - python >=3.9
     - anndata >=0.8.0
-    - pandas
-    - numpy
-    - scipy >=1.9.0
-    - matplotlib-base
-    - upsetplot
-    - tomli
-    - tomli-w
-    - distinctipy
     - click
+    - distinctipy
+    - fastcluster
+    - matplotlib-base
+    - networkx
+    - numpy
+    - pandas
     - pygraphviz
+    - python >=3.9
     - python-igraph
     - pyyaml
-    - scikit-learn
+    - requests
     - scanpy
-    - fastcluster
+    - scikit-learn
+    - scipy >=1.9.0
     - seaborn
     - statsmodels
-    - networkx
     - tqdm
+    - tomli
+    - tomli-w
+    - upsetplot
     
 test:
   imports:
