@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
@@ -22,27 +22,28 @@ requirements:
     - setuptools >=42
     - pip
   run:
-    - python >=3.9
     - anndata >=0.8.0
-    - pandas
-    - numpy
-    - scipy >=1.9.0
-    - matplotlib-base
-    - upsetplot
-    - tomli
-    - tomli-w
-    - distinctipy
     - click
+    - distinctipy
+    - fastcluster
+    - matplotlib-base
+    - networkx
+    - numpy
+    - pandas
     - pygraphviz
+    - python >=3.9
     - python-igraph
     - pyyaml
-    - scikit-learn
+    - requests
     - scanpy
-    - fastcluster
+    - scikit-learn
+    - scipy >=1.9.0
     - seaborn
     - statsmodels
-    - networkx
     - tqdm
+    - tomli
+    - tomli-w
+    - upsetplot
     
 test:
   imports:
