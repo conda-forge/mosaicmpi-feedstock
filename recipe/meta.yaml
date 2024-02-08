@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.4.3" %}
+{% set version = "2.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f73ac4708be2bca86c33a2be445e3f5d05ea33ef889d57dc0994f69e02b232ab
+  sha256: e9434359ae3b10b047f2ab10c71dcaece4689ce3bb9cabfcb4cd9cbdde574d1d
 
 build:
   noarch: python
@@ -44,7 +44,7 @@ requirements:
     - tomli
     - tomli-w
     - upsetplot
-    
+
 test:
   imports:
     - mosaicmpi
@@ -57,10 +57,8 @@ about:
   home: https://github.com/MorrissyLab/mosaicMPI
   summary: 'mosaicMPI: mosaic multi-resolution program integration'
   description: >
-    mosaicMPI is a Python package enabling mosaic integration of bulk, single-cell, and spatial expression data through program-level integration.
-    Programs are first discovered using consensus non-negative matrix factorization and then integrated using a flexible network-based approach to group
-    similar programs together across resolutions and datasets. Program communities are then interpreted using sample/cell metadata and classical gene
-    set analyses. Integrative program communities enable metadata transfer across datasets.
+    mosaicMPI is a Python package enabling mosaic integration of bulk, single-cell, and spatial expression data through program-level integration. Programs are first discovered using consensus non-negative matrix factorization and then integrated using a flexible network-based approach to group similar programs together
+    across resolutions and datasets. Program communities are then interpreted using sample/cell metadata and classical gene set analyses. Integrative program communities enable metadata transfer across datasets.
   license: MIT
   license_file: LICENSE
 
