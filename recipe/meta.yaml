@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.4.4" %}
+{% set version = "2.4.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e9434359ae3b10b047f2ab10c71dcaece4689ce3bb9cabfcb4cd9cbdde574d1d
+  sha256: 791f7ada6c62c40fe3980edd9c536c145687a7d9a4669ef3da63f91a94e19abf
 
 build:
   noarch: python
@@ -35,7 +35,6 @@ requirements:
     - python-igraph
     - pyyaml
     - requests
-    - scanpy
     - scikit-learn
     - scipy >=1.9.0
     - seaborn
