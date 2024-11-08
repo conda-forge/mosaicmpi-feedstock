@@ -6,21 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 98cf8e8bf515cb1fb0245a4fc98985ae9c0f14e504a5037499dce919df024789
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=42
     - pip
   run:
+    - python >={{ python_min }}
     - anndata >=0.8.0
     - click
     - distinctipy
@@ -30,7 +31,6 @@ requirements:
     - numpy
     - pandas
     - pygraphviz
-    - python >=3.9
     - python-igraph
     - pyyaml
     - requests
@@ -49,6 +49,7 @@ test:
   commands:
     - pip list
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
