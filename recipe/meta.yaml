@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.7.0" %}
+{% set version = "2.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8718bc236b273631c064c5b164fa6ac8bc3f1fd7ab20e4f20df43280cc77c02e
+  sha256: d18f5640604430ebf842949b30987640183ca3b799e2803d090b1952495ec72e
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -29,6 +29,7 @@ requirements:
     - networkx
     - numpy
     - pandas
+    - pygam
     - pygraphviz
     - python >=3.9
     - python-igraph
