@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.6.7" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fe75fbefebe4ec416802bba905a6285e2904ee1b1b5a801ab3ab1ab7d13a89f2
+  sha256: 8718bc236b273631c064c5b164fa6ac8bc3f1fd7ab20e4f20df43280cc77c02e
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -21,7 +21,7 @@ requirements:
     - setuptools >=42
     - pip
   run:
-    - anndata >=0.8.0
+    - anndata
     - click
     - distinctipy
     - fastcluster
@@ -35,7 +35,7 @@ requirements:
     - pyyaml
     - requests
     - scikit-learn
-    - scipy >=1.9.0
+    - scipy
     - seaborn
     - statsmodels
     - tqdm
