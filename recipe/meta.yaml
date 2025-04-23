@@ -1,5 +1,5 @@
 {% set name = "mosaicmpi" %}
-{% set version = "2.7.6" %}
+{% set version = "2.7.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3517fde35e636f8fe171cd14e22f835e0e8058dca44af12a42bc8d184f644b5f
+  sha256: 4e476acb50c22350caabc23a930c0f43cebef0b9f37516802158feffaf429cf9
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
