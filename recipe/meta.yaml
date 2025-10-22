@@ -1,5 +1,6 @@
 {% set name = "mosaicmpi" %}
 {% set version = "2.8.5" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -11,13 +12,13 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - mosaicmpi = mosaicmpi.cli:cli
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=42
     - pip
   run:
@@ -31,7 +32,7 @@ requirements:
     - pandas
     - pygam
     - pygraphviz
-    - python >=3.9
+    - python >={{ python_min }}
     - python-igraph
     - pyyaml
     - requests
@@ -51,6 +52,7 @@ test:
     - pip list
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/MorrissyLab/mosaicMPI
